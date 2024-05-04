@@ -6,14 +6,12 @@ const reactionSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
-    reactionbody: {
+    reactionBody: {
       type: String,
       required: true,
       maxlength: 280,
       minlength: 1,
-     
     },
-  
     createdAt: {
       type: Date,
       default: Date.now,

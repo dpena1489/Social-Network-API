@@ -1,22 +1,19 @@
 const { Schema, model } = require('mongoose');
 
-
 // Schema to create Student model
 const userSchema = new Schema(
   {
-    UserName: {
+    userName: {
       type: String,
       required: true,
-    
     },
     email: {
       type: String,
       required: true,
-     
     },
     friends: [{
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'user',
     }],
     thoughts: [{
       type: Schema.Types.ObjectId,
@@ -30,6 +27,6 @@ const userSchema = new Schema(
   }
 );
 
-const Student = model('user', userSchema);
+const User = model('user', userSchema);
 
-module.exports = user;
+module.exports = User;
